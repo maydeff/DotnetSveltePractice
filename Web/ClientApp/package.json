@@ -23,5 +23,9 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@egoist/tailwindcss-icons": "^1.4.0",
+		"@iconify/json": "^2.2.133"
+	}
 }
