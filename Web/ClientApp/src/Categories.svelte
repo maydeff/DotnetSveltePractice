@@ -1,5 +1,6 @@
 <script lang="ts">
     import { categories } from './store'
+    import Icon from '@iconify/svelte'
 </script>
 
 <aside
@@ -15,7 +16,7 @@
                         href="#"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                     >
-                        <span class={c.iconName} />
+                        <Icon icon={c.iconName} width={30} />
                         <span class="ml-3">{c.name}</span>
                     </a>
                 </li>

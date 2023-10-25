@@ -10,8 +10,9 @@
 
 <div class="p-4 sm:ml-64">
     <section class="block justify-start text-center items-start">
-        <!-- <div class="text-4xl font-bold underline text-blue-700"> -->
-        <div class="text-blue-700 underline">Hello from Tailwind CSS!</div>
+        <div class="text-4xl text-blue-700 underline font-bold">
+            Hello from Tailwind CSS!
+        </div>
 
         <HelloApi />
     </section>

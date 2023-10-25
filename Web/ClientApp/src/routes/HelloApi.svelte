@@ -10,7 +10,7 @@
 </script>
 
 <div>
-    {#if weatherForecastData === undefined}np
+    {#if weatherForecastData === undefined}
         <p>Loading...</p>
     {:else}
         <span>Hello from API: {weatherForecastData}</span>
