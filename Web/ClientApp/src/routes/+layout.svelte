@@ -1,15 +1,18 @@
 <script>
-    import Categories from '../Categories.svelte'
-    import Header from './Header.svelte'
+    import SideBar from '../SideBar.svelte'
+    import TopBar from '../TopBar.svelte'
 </script>
 
-<div class="flex flex-col min-h-screen">
-    <Header />
-    <div class="flex-row">
-        <Categories />
-        <main class="flex flex-row p-4 bg-cyan-200 box-border">
-            <slot />
-        </main>
+<div class="flex">
+    <div class="block">
+        <TopBar />
+
+        <div class="flex">
+            <SideBar />
+            <main class="mt-20 p-2 bg-green-400">
+                <slot />
+            </main>
+        </div>
     </div>
 </div>
 
