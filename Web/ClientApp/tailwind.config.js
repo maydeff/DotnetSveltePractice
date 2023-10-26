@@ -10,6 +10,17 @@ export default {
       'border-primary': '#ad99bb',
       'border-shadow': '#680e9c',
       'read-white': '#dad7d2',
+      'deep-blue': {
+          100: "#d0cde0",
+          200: "#a19cc1",
+          300: "#736aa1",
+          400: "#443982",
+          500: "#150763",
+          600: "#11064f",
+          700: "#0d043b",
+          800: "#080328",
+          900: "#040114"
+      },
       'cinder': {
         '50': '#f2f1fe',
         '100': '#e3e2fc',

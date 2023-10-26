@@ -10,12 +10,8 @@
 </svelte:head>
 
 <div class="p-4">
-    <section class="block justify-start text-center items-start bg-cinder-950">
-        <div class="text-4xl text-cinder-50 underline font-bold">
-            Hello from Tailwind CSS!
-        </div>
-
+    <div class="block justify-start text-center items-start bg-cinder-950">
         <HelloApi />
         <MainContent />
-    </section>
+    </div>
 </div>

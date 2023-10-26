@@ -10,7 +10,7 @@
             <li>
                 <a
                     href="#"
-                    class="flex items-center p-2 text-read-white rounded-lg dark:text-white hover:bg-cinder-900 dark:hover:bg-gray-700 group"
+                    class="flex items-center p-2 text-read-white rounded-lg dark:text-white hover:bg-cinder-950 hover:border-b-2 hover:border-deep-blue-500 group"
                 >
                     <Icon icon={c.iconName} width={30} />
                     <span class="ml-3">{c.name}</span>

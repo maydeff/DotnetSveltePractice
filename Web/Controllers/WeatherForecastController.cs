@@ -30,7 +30,7 @@ namespace Web.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            await Task.Delay(300);
+            await Task.Delay(2000);
             var forecast = new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.UtcNow),
