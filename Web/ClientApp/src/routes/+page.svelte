@@ -1,7 +1,7 @@
 <script>
     import HelloApi from './HelloApi.svelte'
     import '../app.css'
-    import DummyContent from '../MainContent.svelte'
+    import MainContent from '../MainContent.svelte'
 </script>
 
 <svelte:head>
@@ -16,6 +16,6 @@
         </div>
 
         <HelloApi />
-        <DummyContent />
+        <MainContent />
     </section>
 </div>

@@ -3,7 +3,7 @@
 </script>
 
 <div
-    class="bg-dark-secondary w-full max-w-5xl p-6 rounded-lg shadow mx-auto my-3 text-left"
+    class="bg-dark-primary w-full max-w-5xl p-6 rounded-lg shadow mx-auto my-3 text-left hover:bg-dark-secondary"
 >
     <!-- Thread Header -->
     <div class="mb-4">
