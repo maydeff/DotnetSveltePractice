@@ -1,4 +1,5 @@
 <script>
+    import EventFeed from '../EventFeed.svelte'
     import SideBar from '../SideBar.svelte'
     import TopBar from '../TopBar.svelte'
 </script>
@@ -13,11 +14,11 @@
             >
                 <SideBar />
             </aside>
-            <main class="col-span-8 p-8 mt-16 border border-solid border-b-8">
+            <main class="col-span-8 bg-dark-primary p-4 mt-16">
                 <slot />
             </main>
-            <div class="bg-dark-secondary text-white col-span-2 p-4 mt-16">
-                Event Feed
+            <div class="bg-dark-primary text-read-white col-span-2 mt-16">
+                <EventFeed />
             </div>
         </div>
     </div>

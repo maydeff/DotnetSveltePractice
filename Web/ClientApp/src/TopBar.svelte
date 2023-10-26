@@ -1,4 +1,4 @@
-<header>
+<header class="text-read-white">
     <nav
         class="grid grid-cols-12 bg-dark-primary text-white h-20 w-full fixed top-0 left-0 items-center justify-center z-40"
     >

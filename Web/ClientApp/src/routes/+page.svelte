@@ -1,6 +1,7 @@
 <script>
     import HelloApi from './HelloApi.svelte'
     import '../app.css'
+    import DummyContent from '../MainContent.svelte'
 </script>
 
 <svelte:head>
@@ -9,13 +10,12 @@
 </svelte:head>
 
 <div class="p-4">
-    <section
-        class="block justify-start text-center items-start border-solid border-4 border-cinder-600 bg-cinder-950"
-    >
+    <section class="block justify-start text-center items-start bg-cinder-950">
         <div class="text-4xl text-cinder-50 underline font-bold">
             Hello from Tailwind CSS!
         </div>
 
         <HelloApi />
+        <DummyContent />
     </section>
 </div>
