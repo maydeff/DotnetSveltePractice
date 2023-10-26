@@ -1,54 +1,28 @@
 <script>
-	import Header from "./Header.svelte";
+    import EventFeed from '../EventFeed.svelte'
+    import SideBar from '../SideBar.svelte'
+    import TopBar from '../TopBar.svelte'
 </script>
 
-<div class="app">
-	<Header />
+<div>
+    <div class="block">
+        <TopBar />
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>
-			visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-		</p>
-	</footer>
+        <div class="grid grid-cols-12">
+            <aside
+                class="col-span-2 sticky bg-dark-primary text-white top-0 left-0 z-10 pt-20 h-screen transition-transform"
+            >
+                <SideBar />
+            </aside>
+            <main class="col-span-8 bg-dark-primary p-4 mt-16">
+                <slot />
+            </main>
+            <div class="bg-dark-primary text-read-white col-span-2 mt-16">
+                <EventFeed />
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
 </style>

@@ -1,17 +1,17 @@
 <script>
-	import HelloApi from "./HelloApi.svelte";
-	import "../app.css";
+    import HelloApi from './HelloApi.svelte'
+    import '../app.css'
+    import MainContent from '../MainContent.svelte'
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+    <title>Home</title>
+    <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="content-center text-center">
-	<div class="text-4xl font-bold underline text-blue-700">
-		Hello from Tailwind CSS!
-	</div>
-
-	<HelloApi />
-</section>
+<div class="p-4">
+    <div class="block justify-start text-center items-start bg-cinder-950">
+        <HelloApi />
+        <MainContent />
+    </div>
+</div>
