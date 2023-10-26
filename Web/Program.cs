@@ -1,4 +1,11 @@
+using Service;
+using Shared;
+
 var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+
+builder.Services.AddOptions<NoSqlSettings>().Bind(builder.Configuration.GetSection(NoSqlSettings.ConfigurationKey)); ;
+builder.Services.AddScoped<IForumThreadsService, ForumThreadsService>();
 
 // Add services to the container.
 
@@ -7,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
+
 
 var app = builder.Build();
 
