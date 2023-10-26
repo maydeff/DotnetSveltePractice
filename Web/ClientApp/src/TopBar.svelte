@@ -29,7 +29,6 @@
         </div>
         <div class="col-span-6">
             <div class="flex justify-end items-center p-4">
-                <!-- Notification Icon -->
                 <div class="mx-2">
                     <Icon
                         icon="mdi:information-variant-circle-outline"
