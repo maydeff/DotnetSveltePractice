@@ -11,12 +11,12 @@ public class ThreadContentService : IThreadContentService
     private readonly IMongoClient _mongoClient;
 
     public ThreadContentService(
-        IOptions<NoSqlSettings> bookStoreDatabaseSettings, IMongoClient mongoClient)
+        IOptions<NoSqlSettings> noSqlSettings, IMongoClient mongoClient)
     {
         _mongoClient = mongoClient;
 
         var mongoDatabase = _mongoClient.GetDatabase(
-            bookStoreDatabaseSettings.Value.DatabaseName);
+            noSqlSettings.Value.DatabaseName);
 
         _threadsCollection = mongoDatabase.GetCollection<ThreadContent>(
             "Threads");
