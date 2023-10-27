@@ -18,7 +18,7 @@ namespace Web.Controllers
         [HttpGet]
         public async Task<List<ForumThread>> Get()
         {
-
+            await Task.Delay(2000);
             return await _forumThreadsService.GetAsync();
         }
 
