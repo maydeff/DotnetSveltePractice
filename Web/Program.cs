@@ -1,11 +1,15 @@
-using Service;
+using Service.Extensions;
 using Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
-builder.Services.AddOptions<NoSqlSettings>().Bind(builder.Configuration.GetSection(NoSqlSettings.ConfigurationKey)); ;
-builder.Services.AddScoped<IForumThreadsService, ForumThreadsService>();
+builder.Services.AddOptions<NoSqlSettings>().Bind(builder.Configuration.GetSection(NoSqlSettings.ConfigurationKey));
+builder.Services.AddOptions<PostgreSettings>().Bind(builder.Configuration.GetSection(PostgreSettings.ConfigurationKey));
+
+builder.Services.AddMongoService(builder.Configuration[$"{NoSqlSettings.ConfigurationKey}:ConnectionString"] ?? string.Empty);
+builder.Services.AddPostgreService(builder.Configuration[$"{PostgreSettings.ConfigurationKey}:ConnectionString"] ?? string.Empty);
+
 
 // Add services to the container.
 
