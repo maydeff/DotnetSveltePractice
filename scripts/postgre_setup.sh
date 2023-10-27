@@ -4,8 +4,8 @@
 POSTGRES_IMAGE="postgres"
 POSTGRES_CONTAINER_NAME="my-postgres-demo"
 POSTGRES_PORT="5432"
-POSTGRES_USER="admin"
-POSTGRES_PASSWORD="admin"
+POSTGRES_USER="postgres"
+POSTGRES_PASSWORD="postgres"
 POSTGRES_DB="test_database"
 
 # ANSI color codes for colored output
