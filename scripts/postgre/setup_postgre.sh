@@ -39,6 +39,8 @@ start_container() {
   exit 0
 }
 
+echo -e "${GREEN}--------SETUP POSTGRE DB--------${NC}"
+
 # Pull the latest PostgreSQL image
 docker pull $POSTGRES_IMAGE
 
