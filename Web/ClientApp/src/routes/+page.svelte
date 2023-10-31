@@ -1,5 +1,5 @@
 <script>
-    import HelloApi from './HelloApi.svelte'
+    import HelloApi from '../HelloApi.svelte'
     import '../app.css'
     import MainContent from '../MainContent.svelte'
 </script>
