@@ -10,7 +10,7 @@
     let apiData: ApiResponse[] | undefined = undefined
     async function fetchData() {
         try {
-            const response = await fetch(`${apiUrl}/ForumThreads`)
+            const response = await fetch(`${apiUrl}/threads`)
             if (!response.ok) {
                 console.log('ERROR', response.status)
             } else {
