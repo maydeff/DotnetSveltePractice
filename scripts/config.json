@@ -1,0 +1,16 @@
+{
+  "nosql": {
+    "docker_image": "mongo",
+    "port": 27017,
+    "container_name": "my-mongodb-demo",
+    "database_name": "forum_threads"
+  },
+  "rdb": {
+    "docker_image": "postgres",
+    "container_name": "my-postgres-demo",
+    "port": "5432",
+    "username": "postgres",
+    "password": "postgres",
+    "database_name": "forum_threads"
+  }
+}

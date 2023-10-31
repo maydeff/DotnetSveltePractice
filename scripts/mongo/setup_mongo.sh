@@ -1,9 +1,24 @@
 #!/bin/bash
 
-# Define variables
-MONGO_IMAGE="mongo"
-MONGO_CONTAINER_NAME="my-mongodb-demo"
-MONGO_PORT="27017"
+if [ -n "$1" ]; then
+    config_file="$1"
+
+    echo "Using config file: $config_file"
+else
+    default_config_file="../config.json"
+    config_file=$default_config_file
+
+    echo "Config file not provided. Using default one: $config_file"
+fi
+
+if [ ! -f "$config_file" ]; then
+  echo "Config file not found: $config_file"
+  exit 1
+fi
+
+MONGO_IMAGE=$(jq -r '.nosql.docker_image' "$config_file")
+MONGO_CONTAINER_NAME=$(jq -r '.nosql.container_name' "$config_file")
+MONGO_PORT=$(jq -r '.nosql.port' "$config_file")
 
 # ANSI color codes for colored output
 GREEN='\033[0;32m'  # Green

@@ -1,12 +1,14 @@
 #!/bin/bash
 
+config_file="config.json"
+
 # Define variables
-POSTGRES_IMAGE="postgres"
-POSTGRES_CONTAINER_NAME="my-postgres-demo"
-POSTGRES_PORT="5432"
-POSTGRES_USER="postgres"
-POSTGRES_PASSWORD="postgres"
-POSTGRES_DB="test_database"
+POSTGRES_IMAGE=$(jq -r '.rdb.docker_image' $config_file)
+POSTGRES_CONTAINER_NAME=$(jq -r '.rdb.container_name' $config_file)
+POSTGRES_PORT=$(jq -r '.rdb.port' $config_file)
+POSTGRES_USER=$(jq -r '.rdb.username' $config_file)
+POSTGRES_PASSWORD=$(jq -r '.rdb.password' $config_file)
+POSTGRES_DB=$(jq -r '.rdb.database_name' $config_file)
 
 # ANSI color codes for colored output
 GREEN='\033[0;32m'  # Green
