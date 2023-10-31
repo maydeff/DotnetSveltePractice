@@ -37,6 +37,8 @@ start_container()
     exit 0
 }
 
+echo -e "${GREEN}--------SETUP MONGO DB--------${NC}"
+
 # Pull the latest MongoDB image
 docker pull $MONGO_IMAGE
 
